@@ -3,7 +3,7 @@
 	http://www.phpied.com/rgb-color-parser-in-javascript/
 */
 
-module.exports = function(color_string) {
+var RGBColor = function(color_string) {
     this.ok = false;
     this.alpha = 1.0;
 
@@ -370,4 +370,6 @@ module.exports = function(color_string) {
         return new RGBColor('hsl(' + Math.round(hsl[0] * 360) + ',' + Math.round(hsl[1] * 100) + '%,' + Math.round(hsl[2] * 100) + '%)');
     };
 
-}
+};
+
+module.exports = RGBColor;
